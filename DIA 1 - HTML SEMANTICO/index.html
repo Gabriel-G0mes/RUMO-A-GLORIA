@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML Semântico – A Conquista</title>
+  <meta name="description" content="Passos para a conquista: motivação diária em estrutura HTML semântica.">
+</head>
+<body>
+  <header>
+    <h1>A Conquista</h1>
+    <!-- Se tivesse navegação, entraria um <nav> aqui -->
+  </header>
+
+  <main>
+    <section aria-labelledby="titulo-passos">
+      <h2 id="titulo-passos">Passos</h2>
+
+      <article>
+        <header>
+          <h3>Passo 1</h3>
+        </header>
+        <p>Não desista.</p>
+        <footer>
+          <p><small>Dica: consistência vence intensidade.</small></p>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <h3>Passo 2</h3>
+        </header>
+        <p>Cada dia deixa você mais perto.</p>
+        <footer>
+          <p><small>Micro-metas diárias mantêm o impulso.</small></p>
+        </footer>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <small>
+      © <time datetime="2025">2025</time> Gabriel Gomes
+    </small>
+  </footer>
+</body>
+</html>
