@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+</head>
+<body>
+    <a href="#principal">skip to main</a>
+
+    <header>
+        <nav aria-label="navegação-principal">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#estudos">Estudos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="principal">
+        <h1>Meu Portfolio</h1>
+
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+            <ul>
+                <li>Paciente</li>
+                <li>Produtivo</li>
+                <li>Focado</li>
+            </ul>
+        </section>
+
+        <section id="estudos">
+            <h2>Estudos</h2>
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ol>
+
+            <h2>O que cada uma significa</h2>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Linguagem de marcação de texto</dd>
+
+                <dt>CSS</dt>
+                <dd>Tecnologia que aplica estilos para as paginas</dd>
+
+                <dt>JavaScript</dt>
+                <dd>Linguagem de programação usada geralmente para aplicação de interatividade nas páginas web</dd>
+            </dl>
+        </section>
+
+        <section id="contato">
+            <form action="">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required autocomplete="name">
+
+                <label for="email">email</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+
+                <label for="mensagem">Digite alguma mensagem</label>
+                <textarea rows="5" name="mensagem" id="mensagem"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        Feito por gabriel - <a href="mailto:gabrielggteam@gmail.com">Email</a> <a href="tel:+1197869000">Telefone</a>
+    </footer>
+</body>
+</html>
