@@ -1,0 +1,69 @@
+/* Base visual para enxergar melhor os itens */
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; }
+.flexbox-container {
+  display: flex;
+  border: 1px solid black;
+  width: 600px;           /* largura padrão dos exemplos */
+  min-height: 100px;
+  margin-top: 30px;
+  padding: 8px;
+  gap: 8px;               /* facilita ver os espaços */
+}
+.item {
+  text-align: center;
+  background-color: lightsalmon;
+  border: 1px solid black;
+  min-width: 80px;
+  min-height: 50px;
+  padding: 8px 12px;
+}
+
+/* EXEMPLO 1 — row-reverse + space-around + align-items */
+.exemplo1 {
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* EXEMPLO 2 — wrap bem visível + base fixa para forçar quebra */
+.exemplo2 {
+  flex-wrap: wrap;
+  width: 400px;           /* menor que o padrão, para forçar múltiplas linhas */
+  align-content: space-between;  /* só faz efeito com múltiplas linhas */
+}
+.exemplo2 .item {
+  flex: 0 1 160px;        /* basis ~160px: 2 por linha (400px container → wrap) */
+}
+
+/* EXEMPLO 3 — todos iguais e item 3 cresce mais */
+.exemplo3 .item {
+  flex: 1 1 0;            /* divide igualmente o espaço disponível */
+}
+.exemplo3 .item3 {
+  flex-grow: 2;           /* ocupa o dobro do espaço livre */
+  background-color: #d7ffe2;
+}
+
+/* EXEMPLO 4 — order altera ordem visual (atenção acessibilidade) */
+.exemplo4 .item4 {
+  order: -1;              /* traz o item 4 para o início visualmente */
+  background-color: #ffe8d7;
+}
+
+/* EXEMPLO 5 — align-items no container + align-self em um item */
+.exemplo5 {
+  flex-wrap: wrap;
+  align-items: stretch;   /* regra geral para itens do container */
+  align-content: space-around;
+  width: 520px;           /* para gerar múltiplas linhas */
+}
+.exemplo5 .item {
+  flex: 0 1 150px;
+  min-height: 60px;
+}
+.exemplo5 .item5 {
+  align-self: flex-end;   /* este item ignora o align-items do container */
+  min-height: 100px;
+  background-color: #fff3d6;
+}
